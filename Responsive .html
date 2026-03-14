@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    background:#333;
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:15px 20px;
+}
+
+/* Hamburger Icon */
+
+.menu-icon{
+    font-size:28px;
+    cursor:pointer;
+    margin-right:20px;
+}
+
+/* Navigation */
+
+nav{
+    display:none;
+    background:#444;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    border-bottom:1px solid #555;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:12px;
+}
+
+nav ul li a:hover{
+    background:#555;
+}
+
+nav.show{
+    display:block;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#f4f4f4;
+}
+
+/* Sections */
+
+section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* Projects */
+
+.project-container{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#eee;
+    padding:20px;
+    width:300px;
+    border-radius:8px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    background:#333;
+    color:white;
+    padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<h1>Ritik Gurjar</h1>
+
+</header>
+
+<nav id="menu">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h2>Web Developer</h2>
+<p>I build responsive websites using HTML, CSS and Java.</p>
+</section>
+
+<section class="about">
+<h2>About Me</h2>
+<p>I am a BCA student passionate about web development and programming.</p>
+</section>
+
+<section class="projects">
+<h2>My Projects</h2>
+
+<div class="project-container">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio built using HTML and CSS.</p>
+</div>
+
+<div class="card">
+<h3>Java Project</h3>
+<p>Hospital Staff Management System.</p>
+</div>
+
+<div class="card">
+<h3>Calculator</h3>
+<p>Simple calculator using Java.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact">
+<h2>Contact Me</h2>
+<a href="mailto:ritikg.bca2025@ssism.org">
+Email:- ritikg.bca2025@ssism.org
+</a>
+</section>
+
+<footer>
+<p>© 2026 Ritik Gurjar</p>
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>
