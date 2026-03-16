@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ritik Portfolio</title>
+
+<style>
+
+/* Smooth Scrolling */
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+margin:0;
+font-family:Arial;
+background:white;
+color:black;
+transition:0.4s;
+}
+
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#333;
+color:white;
+position:sticky;
+top:0;
+}
+
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:18px;
+}
+
+
+section{
+padding:100px;
+text-align:center;
+}
+
+/* Form */
+
+input{
+display:block;
+margin:10px auto;
+padding:10px;
+width:220px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* Button */
+
+button{
+padding:10px 20px;
+cursor:pointer;
+border:none;
+background:#007BFF;
+color:white;
+border-radius:5px;
+}
+
+/* Dark Mode */
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark header{
+background:black;
+}
+
+.dark nav a{
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Ritik Gurjar</h2>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button id="darkBtn">🌙 Dark Mode</button>
+
+</header>
+
+<section id="home">
+
+<h1>Welcome</h1>
+<p>This is my personal portfolio website.</p>
+
+</section>
+
+<section id="about">
+
+<h1>About Me</h1>
+<p>I am a BCA student learning Web Development.</p>
+
+</section>
+
+<section id="projects">
+
+<h1>Projects</h1>
+<p>My upcoming web development projects will appear here.</p>
+
+</section>
+
+<section id="contact">
+
+<h1>Contact Me</h1>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="email" id="email" placeholder="Enter your email">
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
+
+<script>
+
+/*Button Text Change */
+
+let darkBtn = document.getElementById("darkBtn");
+
+darkBtn.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+darkBtn.textContent = " Light Mode";
+}
+else{
+darkBtn.textContent = " Dark mode";
+}
+
+});
+
+
+/* Form Validation */
+
+let form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(event){
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+
+if(name === "" || email === "")
+{
+alert("Please fill all fields");
+event.preventDefault();
+return;
+}
+
+if(!email.includes("@"))
+{
+alert("Enter a valid email");
+event.preventDefault();
+return;
+}
+
+alert("Form submitted successfully!");
+
+});
+
+</script>
+
+</body>
+</html>
